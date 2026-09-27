@@ -1,0 +1,14 @@
+:root {
+  --auth-primary: #4ebbbb;
+  --auth-primary-hover: #45a8a8;
+  --auth-primary-light: rgba(78, 187, 187, 0.22);
+  --auth-primary-soft: rgba(78, 187, 187, 0.12);
+  --auth-text-dark: #1a1a1a;
+  --auth-text-muted: #6b7280;
+  --auth-text-placeholder: #9ca3af;
+  --auth-border: rgba(78, 187, 187, 0.45);
+  --auth-input-bg: #ffffff;
+  --auth-card-radius: 24px;
+  --auth-pill-radius: 999px;
+  --auth-font: 'Poppins', system-ui, sans-serif;
+}

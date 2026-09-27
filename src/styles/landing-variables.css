@@ -1,0 +1,97 @@
+:root {
+  /* Layout / spacing control for all breakpoints */
+  --layout-pad-xs: 12px;
+  --layout-pad-sm: 20px;
+  --layout-pad-md: 24px;
+  --layout-pad-lg: 40px;
+  --layout-pad-xl: 50px;
+
+  --landing-teal: #49bbbd;
+  --landing-teal-dark: #3aa8aa;
+  --landing-teal-light: rgba(73, 187, 189, 0.15);
+  --landing-navy: #2f327d;
+  --landing-navy-dark: #252956;
+  --landing-orange: #f48c06;
+  --landing-orange-soft: #fbaa33;
+  --landing-body: #696984;
+  --landing-muted: #9ca3af;
+  --landing-white: #ffffff;
+  --landing-pink: #f67777;
+  --landing-purple: #9d51e0;
+  --landing-blue: #23bdee;
+  --landing-green: #33a850;
+  --landing-red: #ee645a;
+  --landing-footer-bg: #252641;
+  --landing-footer-text: #b2b3cf;
+  --landing-footer-input-bg: rgba(255, 255, 255, 0.05);
+  --landing-footer-input-border: rgba(131, 134, 169, 0.35);
+  --landing-shelf-bg: #eef5fc;
+  --landing-shelf-bar: #dfe8f2;
+  --landing-pill-orange: #ff7a00;
+  --landing-pill-coral: #ff8585;
+  --landing-pill-brown: #9e5b1e;
+  --landing-pill-yellow: #f59e0b;
+  --landing-pill-purple: #a855f7;
+  --landing-pill-blue: #00a3ff;
+  --landing-pill-teal: #14b8a6;
+  --landing-pill-green: #72ba97;
+  --landing-card-border-pink: #f67777;
+  --landing-card-border-cyan: #23bdee;
+  --landing-star-gold: #f59e0b;
+  --landing-radius-lg: 20px;
+  --landing-radius-xl: 30px;
+  --landing-radius-pill: 999px;
+  --landing-shadow: 0 10px 40px rgba(47, 50, 125, 0.08);
+  --landing-font: 'Poppins', system-ui, sans-serif;
+  --landing-font-nunito: 'Nunito Sans', system-ui, sans-serif;
+}
+
+/* Typography Utility Classes */
+.font-poppins {
+  font-family: var(--landing-font) !important;
+}
+
+.font-nunito {
+  font-family: var(--landing-font-nunito) !important;
+}
+
+/* Reusable Color Utility Classes */
+.text-landing-teal {
+  color: var(--landing-teal) !important;
+}
+
+.text-landing-navy {
+  color: var(--landing-navy) !important;
+}
+
+.text-landing-body {
+  color: var(--landing-body) !important;
+}
+
+.text-landing-muted {
+  color: var(--landing-muted) !important;
+}
+
+.text-landing-orange {
+  color: var(--landing-orange) !important;
+}
+
+.text-landing-gold {
+  color: var(--landing-star-gold) !important;
+}
+
+.bg-landing-teal {
+  background-color: var(--landing-teal) !important;
+}
+
+.bg-landing-navy {
+  background-color: var(--landing-navy) !important;
+}
+
+.bg-landing-footer {
+  background-color: var(--landing-footer-bg) !important;
+}
+
+.bg-landing-shelf {
+  background-color: var(--landing-shelf-bg) !important;
+}

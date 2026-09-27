@@ -1,0 +1,318 @@
+@import './auth-variables.css';
+
+.auth-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  background: #f3f4f6;
+  font-family: var(--auth-font);
+}
+
+.auth-card {
+  width: 100%;
+  max-width: 1100px;
+  background: #fff;
+  border-radius: var(--auth-card-radius);
+  overflow: hidden;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.06);
+}
+
+.auth-hero-panel {
+  position: relative;
+  min-height: 220px;
+  height: 100%;
+  border-radius: var(--auth-card-radius);
+  overflow: hidden;
+}
+
+@media (min-width: 768px) {
+  .auth-card .row {
+    min-height: 580px;
+  }
+
+  .auth-hero-panel {
+    min-height: 100%;
+    border-radius: var(--auth-card-radius) 0 0 var(--auth-card-radius);
+  }
+}
+
+.auth-hero-panel__media {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, #3d9a9a 0%, #2d7a7a 100%);
+}
+
+.auth-hero-panel__media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.auth-hero-panel__overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.55) 0%,
+    rgba(0, 0, 0, 0.1) 50%,
+    transparent 100%
+  );
+  pointer-events: none;
+}
+
+.auth-hero-panel__content {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 1.75rem 1.5rem;
+  text-align: left;
+  z-index: 1;
+}
+
+.auth-hero-panel__title {
+  margin: 0 0 0.35rem;
+  font-size: clamp(1.25rem, 2.5vw, 1.75rem);
+  font-weight: 600;
+  color: #fff;
+  line-height: 1.25;
+}
+
+.auth-hero-panel__subtitle {
+  margin: 0;
+  font-size: clamp(0.875rem, 1.5vw, 1rem);
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.9);
+  line-height: 1.4;
+}
+
+.auth-form-panel {
+  padding: 1.75rem 1.25rem 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* Mobile: toggle first, then welcome (per mobile mockup) */
+.auth-form-panel__welcome {
+  order: 2;
+}
+
+.auth-form-panel__description {
+  order: 3;
+}
+
+.auth-form-inner {
+  order: 4;
+}
+
+@media (min-width: 768px) {
+  .auth-form-panel__welcome {
+    order: 1;
+  }
+}
+
+@media (min-width: 576px) {
+  .auth-form-panel {
+    padding: 2.5rem 2.5rem 2.75rem;
+  }
+}
+
+@media (min-width: 992px) {
+  .auth-form-panel {
+    padding: 3rem 3.5rem;
+  }
+}
+
+.auth-form-panel__welcome {
+  margin: 0 0 1rem;
+  font-size: clamp(1.125rem, 2vw, 1.375rem);
+  font-weight: 600;
+  color: var(--auth-text-dark);
+  text-align: center;
+}
+
+.auth-form-panel__description {
+  margin: 0 0 1.5rem;
+  font-size: 0.8125rem;
+  line-height: 1.55;
+  color: var(--auth-text-muted);
+  text-align: center;
+  max-width: 340px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.auth-mode-toggle {
+  order: 1;
+  display: flex;
+  background: var(--auth-primary-light);
+  border-radius: var(--auth-pill-radius);
+  padding: 4px;
+  margin-bottom: 1.25rem;
+  max-width: 100%;
+}
+
+@media (min-width: 768px) {
+  .auth-mode-toggle {
+    order: 2;
+  }
+}
+
+.auth-mode-toggle__link {
+  flex: 1;
+  text-align: center;
+  padding: 0.65rem 1rem;
+  border-radius: var(--auth-pill-radius);
+  font-size: 0.9375rem;
+  font-weight: 500;
+  text-decoration: none;
+  color: var(--auth-primary);
+  transition: background 0.2s ease, color 0.2s ease;
+  border: none;
+  background: transparent;
+}
+
+.auth-mode-toggle__link--active {
+  background: var(--auth-primary);
+  color: #fff;
+}
+
+.auth-mode-toggle__link:not(.auth-mode-toggle__link--active):hover {
+  color: var(--auth-primary-hover);
+}
+
+.form-text-field {
+  margin-bottom: 1.125rem;
+  text-align: left;
+}
+
+.form-text-field__label {
+  display: block;
+  margin-bottom: 0.4rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--auth-text-dark);
+}
+
+.form-text-field__wrapper {
+  position: relative;
+}
+
+.form-text-field__input {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  font-size: 0.875rem;
+  font-family: var(--auth-font);
+  color: var(--auth-text-dark);
+  background: var(--auth-input-bg);
+  border: 1px solid var(--auth-border);
+  border-radius: var(--auth-pill-radius);
+  outline: none;
+  box-sizing: border-box;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.form-text-field__input::placeholder {
+  color: var(--auth-text-placeholder);
+}
+
+.form-text-field__input:focus {
+  border-color: var(--auth-primary);
+  box-shadow: 0 0 0 3px var(--auth-primary-soft);
+}
+
+.form-text-field__input--with-icon {
+  padding-right: 2.75rem;
+}
+
+.form-text-field__toggle {
+  position: absolute;
+  right: 0.75rem;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  padding: 0.25rem;
+  color: var(--auth-text-muted);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.125rem;
+}
+
+.form-text-field__toggle:hover {
+  color: var(--auth-primary);
+}
+
+.auth-form-extras {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+  font-size: 0.8125rem;
+}
+
+.auth-remember {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  color: var(--auth-text-muted);
+  cursor: pointer;
+  user-select: none;
+}
+
+.auth-remember input {
+  width: 1rem;
+  height: 1rem;
+  accent-color: var(--auth-primary);
+  cursor: pointer;
+}
+
+.auth-forgot-link {
+  color: var(--auth-text-muted);
+  text-decoration: none;
+  font-size: 0.8125rem;
+}
+
+.auth-forgot-link:hover {
+  color: var(--auth-primary);
+  text-decoration: underline;
+}
+
+.primary-button {
+  display: block;
+  width: 100%;
+  max-width: 280px;
+  margin: 0 auto;
+  padding: 0.75rem 2rem;
+  font-family: var(--auth-font);
+  font-size: 0.9375rem;
+  font-weight: 500;
+  color: #fff;
+  background: var(--auth-primary);
+  border: none;
+  border-radius: var(--auth-pill-radius);
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.1s ease;
+}
+
+.primary-button:hover {
+  background: var(--auth-primary-hover);
+}
+
+.primary-button:active {
+  transform: scale(0.98);
+}
+
+.auth-form-inner {
+  max-width: 380px;
+  margin: 0 auto;
+  width: 100%;
+}
